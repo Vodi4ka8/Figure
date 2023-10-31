@@ -39,7 +39,7 @@ CREATE UNIQUE INDEX prod_cat ON ProdCat(products_id, category_id);
 ### Заполняем бд
 ```SQL 
 INSERT INTO Products VALUES('Пижама'), ('Тапочки'), ('Отвертка');
-INSERT INTO Category VALUES('Домашняя одежда'), ('Столовые приборы');
+INSERT INTO Category VALUES('Домашняя одежда'), ('Инструмент');
 INSERT INTO ProdCat VALUES(1, 1), (2, 1), (3, 2);
 ```
 ### Запрос
