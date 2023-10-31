@@ -26,7 +26,7 @@ id INT PRIMARY KEY IDENTITY,
 name VARCHAR(max) NOT NULL
 );
 
-CREATE TABLE ProdCat
+CREATE TABLE Prod_To_Category
 (
 products_id INT NOT NULL,
 category_id INT NOT NULL,
@@ -46,7 +46,7 @@ INSERT INTO ProdCat VALUES(1, 1), (2, 1), (3, 2);
 ```SQL
 SELECT p.name AS Product, c.name AS Category 
 FROM Products AS p
-LEFT JOIN ProdCat AS pc ON p.id = pc.products_id
+LEFT JOIN Prod_To_Category AS pc ON p.id = pc.products_id
 INNER JOIN Category AS c ON c.id = pc.category_id
 ORDER BY Product;
 ```
